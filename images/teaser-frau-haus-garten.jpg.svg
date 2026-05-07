@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Zu Hause Energie sparen">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3E6A92"/>
+      <stop offset="100%" stop-color="#7DCB5A"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+  <g transform="translate(880, 240)" opacity="0.92">
+    
+  <!-- Sun in corner -->
+  <circle cx="160" cy="-130" r="40" fill="#FFD200"/>
+  <!-- House -->
+  <path d="M -60 -20 L 0 -80 L 60 -20 L 60 60 L -60 60 Z" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="-15" y="10" width="30" height="50" fill="#E2001A"/>
+  <rect x="-50" y="-10" width="20" height="20" fill="#7DCB5A"/>
+  <rect x="30" y="-10" width="20" height="20" fill="#7DCB5A"/>
+  <!-- Ground -->
+  <rect x="-180" y="60" width="360" height="40" fill="#7DCB5A" fill-opacity="0.9"/>
+  <!-- Trees -->
+  <circle cx="-120" cy="40" r="30" fill="#5BA838"/>
+  <rect x="-125" y="50" width="10" height="30" fill="#6B4423"/>
+  <circle cx="120" cy="30" r="35" fill="#5BA838"/>
+  <rect x="115" y="40" width="10" height="40" fill="#6B4423"/>
+
+  </g>
+  <g transform="translate(80, 460)">
+    <rect x="-8" y="-44" width="6" height="120" fill="#E2001A"/>
+    <text x="20" y="0" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Zu Hause Energie sparen</text>
+    <text x="20" y="46" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#ffffff" fill-opacity="0.85">Tipps & Beratung von E.ON</text>
+  </g>
+  <text x="1240" y="690" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.6" text-anchor="end">DEMO PLACEHOLDER · E.ON Mockup</text>
+</svg>

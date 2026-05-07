@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Jetzt passenden Tarif finden">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B3D5F"/>
+      <stop offset="100%" stop-color="#E2001A"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+  <g transform="translate(880, 280)" opacity="0.95">
+  <!-- Magnifying glass over price tag -->
+  <rect x="-100" y="-50" width="180" height="120" rx="14" fill="#ffffff" fill-opacity="0.95"/>
+  <text x="-10" y="30" font-family="Helvetica, Arial, sans-serif" font-size="80" font-weight="800" fill="#E2001A" text-anchor="middle">€</text>
+  <circle cx="80" cy="80" r="40" fill="none" stroke="#ffffff" stroke-width="10"/>
+  <line x1="108" y1="108" x2="150" y2="150" stroke="#ffffff" stroke-width="12" stroke-linecap="round"/>
+</g>
+  <g transform="translate(80, 460)">
+    <rect x="-8" y="-44" width="6" height="120" fill="#FFD200"/>
+    <text x="20" y="0" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Tarif finden</text>
+    <text x="20" y="46" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#ffffff" fill-opacity="0.85">Ihren passenden Energietarif berechnen</text>
+  </g>
+  <text x="1240" y="690" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.6" text-anchor="end">DEMO PLACEHOLDER · E.ON Mockup</text>
+</svg>

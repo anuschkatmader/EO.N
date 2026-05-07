@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="FOCUS MONEY SERVICE KÖNIG Energieversorger 2025">
+  <defs>
+    <radialGradient id="rg" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f0f0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="250" cy="250" r="240" fill="url(#rg)" stroke="#E2001A" stroke-width="8"/>
+  <circle cx="250" cy="250" r="210" fill="none" stroke="#E2001A" stroke-width="2"/>
+  <!-- Ribbons (banners) -->
+  <path d="M 80 380 L 100 480 L 150 440 L 200 480 L 220 380 Z" fill="#E2001A"/>
+  <path d="M 280 380 L 300 480 L 350 440 L 400 480 L 420 380 Z" fill="#E2001A"/>
+  <!-- Star at top -->
+  <polygon points="250,80 263,118 303,118 271,142 283,180 250,158 217,180 229,142 197,118 237,118" fill="#E2001A"/>
+  <!-- Lines -->
+  <text x="250" y="220" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#E2001A" text-anchor="middle">FOCUS MONEY</text>
+  <text x="250" y="270" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="#1a1a1a" text-anchor="middle">SERVICE KÖNIG</text>
+  <text x="250" y="320" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#1a1a1a" text-anchor="middle">Energieversorger 2025</text>
+</svg>

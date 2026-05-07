@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mein E.ON App">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5C2E91"/>
+      <stop offset="100%" stop-color="#E2001A"/>
+    </linearGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <rect width="1280" height="720" fill="url(#dots)"/>
+  <g transform="translate(880, 240)" opacity="0.92">
+    
+  <!-- Laptop -->
+  <rect x="-100" y="-50" width="200" height="120" rx="6" fill="#ffffff" fill-opacity="0.95"/>
+  <rect x="-90" y="-40" width="180" height="100" fill="#1B3D5F"/>
+  <rect x="-130" y="70" width="260" height="14" rx="4" fill="#ffffff" fill-opacity="0.85"/>
+  <!-- Phone overlay -->
+  <rect x="60" y="-10" width="60" height="100" rx="8" fill="#1a1a1a"/>
+  <rect x="65" y="0" width="50" height="80" fill="#E2001A"/>
+  <text x="90" y="48" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle">€</text>
+
+  </g>
+  <g transform="translate(80, 460)">
+    <rect x="-8" y="-44" width="6" height="120" fill="#E2001A"/>
+    <text x="20" y="0" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Mein E.ON App</text>
+    <text x="20" y="46" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#ffffff" fill-opacity="0.85">Verträge & Verbrauch im Blick</text>
+  </g>
+  <text x="1240" y="690" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" fill-opacity="0.6" text-anchor="end">DEMO PLACEHOLDER · E.ON Mockup</text>
+</svg>
