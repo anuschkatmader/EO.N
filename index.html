@@ -262,8 +262,8 @@
   }
   .eon-signup-popup {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -10000px; /* parked off-screen until opened so OneTrust SDK can render the inline form on load */
+    left: -10000px;
     z-index: 999999;
     width: 360px;
     max-width: calc(100vw - 24px);
@@ -275,14 +275,14 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
     padding: 24px 24px 20px;
     opacity: 0;
-    visibility: hidden;
+    pointer-events: none;
     transform: translateY(-6px);
-    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    transition: opacity 0.18s ease, transform 0.18s ease;
     font-family: inherit;
   }
   .eon-signup-wrapper.is-open .eon-signup-popup {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
     transform: translateY(0);
   }
   .eon-signup-popup-close {
@@ -7952,7 +7952,7 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
     var EDGE = 12; // min distance from viewport edge in px
  
     function positionPopup() {
-      // Reset to measure natural size
+      // Reset to top-left to measure natural size, then position correctly
       popup.style.top = '0px';
       popup.style.left = '0px';
       var tRect = trigger.getBoundingClientRect();
@@ -7986,6 +7986,10 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
       popup.style.top = top + 'px';
       popup.style.left = left + 'px';
     }
+    function parkOffScreen() {
+      popup.style.top = '-10000px';
+      popup.style.left = '-10000px';
+    }
  
     function open() {
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
@@ -7999,12 +8003,15 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
       closeTimer = setTimeout(function () {
         wrapper.classList.remove('is-open');
         trigger.setAttribute('aria-expanded', 'false');
+        // Park off-screen again after the fade-out completes
+        setTimeout(parkOffScreen, 200);
       }, CLOSE_DELAY);
     }
     function closeNow() {
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       wrapper.classList.remove('is-open');
       trigger.setAttribute('aria-expanded', 'false');
+      setTimeout(parkOffScreen, 200);
     }
  
     // Open on hover/focus of trigger
