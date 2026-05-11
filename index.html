@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="de">
     <head>
+<!-- ===== START: OneTrust Consent Receipt SDK (loader for embedded web forms) ===== -->
+<script
+  src="https://privacyportaltrial.onetrust.com/consent-embedded-forms/consent-receipt-scripts/OtFormStub.js"
+  data-id="89af9315-196c-45ad-88ea-1b8ec3fe5a51"
+  worker="https://consent-api.onetrust.com"
+></script>
+<!-- ===== END: OneTrust Consent Receipt SDK ===== -->
   <base href="https://www.eon.de/">
     
     
@@ -254,12 +261,14 @@
     padding-bottom: 2px;
   }
   .eon-signup-popup {
-    position: absolute;
-    top: calc(100% + 12px);
+    position: fixed;
+    top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999999;
     width: 360px;
-    max-width: 90vw;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    overflow-y: auto;
     background: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 8px;
@@ -5322,7 +5331,7 @@
           <rect x="3" y="5" width="18" height="14" rx="2"/>
           <path d="M3 7l9 6 9-6"/>
         </svg>
-        <span class="eon-signup-label">Für mehr Informationen anmelden</span>
+        <span class="eon-signup-label">Updates per E-Mail erhalten</span>
       </button>
       <div class="eon-signup-popup" id="eon-signup-popup-emobility" role="dialog" aria-labelledby="eon-signup-popup-title-emobility">
         <button type="button" class="eon-signup-popup-close" aria-label="Schließen">×</button>
@@ -5330,19 +5339,8 @@
         <p class="eon-signup-popup-text">
           Erhalten Sie spannende News und Angebote rund um E-Mobilität direkt per E-Mail. Tragen Sie einfach Ihre E-Mail-Adresse ein und bestätigen Sie Ihre Einwilligung.
         </p>
-        <!--
-          ===== ONETRUST COLLECTION POINT MOUNT =====
-          OneTrust will inject the web form (email field + consent checkbox + submit)
-          into the container below. Replace the placeholders with your real values:
-            - data-ot-collection-point-id="REPLACE_WITH_COLLECTION_POINT_ID"
-            - data-ot-endpoint="REPLACE_WITH_ONETRUST_ENDPOINT_URL"
-          Make sure the OneTrust SDK / loader script is referenced elsewhere in the page.
-        -->
-        <div
-          class="eon-signup-onetrust-mount"
-          data-ot-collection-point-id="REPLACE_WITH_COLLECTION_POINT_ID"
-          data-ot-endpoint="REPLACE_WITH_ONETRUST_ENDPOINT_URL"
-        ></div>
+        <!-- OneTrust inline web form container. The SDK injects the email field + consent checkbox + submit button into this element. -->
+        <div class="ot-open-webform eon-signup-onetrust-mount" id="ot-4574b7d1-a890-4b3b-bd28-b9fe76673ad8"></div>
       </div>
     </div>
     <!-- ===== END: OneTrust email signup trigger + popup ===== -->
@@ -5467,7 +5465,7 @@
     
     
 <div class="cmp-text">
-    <eon-ui-rte-renderer content="&lt;p>Mit Ihrer eigenen Solaranlage gestalten Sie die Energiezukunft aktiv mit – und senken dabei Ihre Stromkosten spürbar. E.ON macht es Ihnen leicht: Unsere Solarlösungen sind jetzt mit 0 % Mehrwertsteuer erhältlich. So profitieren Sie doppelt – heute und langfristig.&lt;/p>" rte-source="aem" class="hydrated">
+    <eon-ui-rte-renderer content="&lt;p>Mit Ihrer eigenen Solaranlage gestalten Sie die Energiezukunft aktiv mit – und senken dabei Ihre Stromkosten spürbar. E.ON macht es Ihnen leicht: Unsere Solarlösungen sind jetzt mit 0 % Mehrwertsteuer erhältlich. So profitieren Sie doppelt – heute und langfristig.&lt;/p>" rte-source="aem" class="hydrated">
         
     </eon-ui-rte-renderer>
 </div>
@@ -7189,7 +7187,7 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
         
     
 <div class="cmp-text">
-    <eon-ui-rte-renderer content="&lt;p>&lt;span class=&#34;eon-copy-small&#34;>&lt;sup>1&lt;/sup> Bitte beachten Sie, dass die Höhe des E.ON Plus-Rabattes abhängig von Ihrem individuellen Jahresverbrauch ist: bis 999 kWh bei Ihrem Stromvertrag bzw. bis 4.999 kWh bei Ihrem Erdgasvertrag erhalten Sie keinen Rabatt; bei 1.000 kWh bis 5.999 kWh bei Ihrem Stromvertrag bzw. bei 5.000 kWh bis 29.999 kWh bei Ihrem Erdgasvertrag erhalten Sie 50 Euro Rabatt; ab 6.000 kWh bei Ihrem Stromvertrag bzw. ab 30.000 kWh bei Ihrem Erdgasvertrag erhalten Sie 100 Euro Rabatt. Falls Sie einen Neukundenbonus einschließlich Sachprämie über 50 Euro bzw. über 5.000 PAYBACK Punkte bekommen haben, beginnt die Zahlung des Rabattes erst nach Ende der Erstvertragslaufzeit. &lt;/span>&lt;/p>" rte-source="aem" class="hydrated">
+    <eon-ui-rte-renderer content="&lt;p>&lt;span class=&#34;eon-copy-small&#34;>&lt;sup>1&lt;/sup> Bitte beachten Sie, dass die Höhe des E.ON Plus-Rabattes abhängig von Ihrem individuellen Jahresverbrauch ist: bis 999 kWh bei Ihrem Stromvertrag bzw. bis 4.999 kWh bei Ihrem Erdgasvertrag erhalten Sie keinen Rabatt; bei 1.000 kWh bis 5.999 kWh bei Ihrem Stromvertrag bzw. bei 5.000 kWh bis 29.999 kWh bei Ihrem Erdgasvertrag erhalten Sie 50 Euro Rabatt; ab 6.000 kWh bei Ihrem Stromvertrag bzw. ab 30.000 kWh bei Ihrem Erdgasvertrag erhalten Sie 100 Euro Rabatt. Falls Sie einen Neukundenbonus einschließlich Sachprämie über 50 Euro bzw. über 5.000 PAYBACK Punkte bekommen haben, beginnt die Zahlung des Rabattes erst nach Ende der Erstvertragslaufzeit. &lt;/span>&lt;/p>" rte-source="aem" class="hydrated">
         
     </eon-ui-rte-renderer>
 </div>
@@ -7950,11 +7948,51 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
  
     var closeTimer = null;
     var CLOSE_DELAY = 200; // ms grace period to move from trigger to popup
+    var GAP = 12; // gap between trigger and popup in px
+    var EDGE = 12; // min distance from viewport edge in px
+ 
+    function positionPopup() {
+      // Reset to measure natural size
+      popup.style.top = '0px';
+      popup.style.left = '0px';
+      var tRect = trigger.getBoundingClientRect();
+      var pRect = popup.getBoundingClientRect();
+      var vw = window.innerWidth;
+      var vh = window.innerHeight;
+ 
+      // Default: place below the trigger, aligned to its left edge
+      var top = tRect.bottom + GAP;
+      var left = tRect.left;
+ 
+      // If it would go off the bottom, place above the trigger instead
+      if (top + pRect.height > vh - EDGE) {
+        var topAbove = tRect.top - GAP - pRect.height;
+        if (topAbove >= EDGE) {
+          top = topAbove;
+        } else {
+          // Doesn't fit above either — clamp to viewport
+          top = Math.max(EDGE, vh - pRect.height - EDGE);
+        }
+      }
+      // Keep it inside the right edge
+      if (left + pRect.width > vw - EDGE) {
+        left = vw - pRect.width - EDGE;
+      }
+      // Keep it inside the left edge
+      if (left < EDGE) {
+        left = EDGE;
+      }
+ 
+      popup.style.top = top + 'px';
+      popup.style.left = left + 'px';
+    }
  
     function open() {
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       wrapper.classList.add('is-open');
       trigger.setAttribute('aria-expanded', 'true');
+      // Position after the popup becomes visible so we can measure it
+      requestAnimationFrame(positionPopup);
     }
     function scheduleClose() {
       if (closeTimer) clearTimeout(closeTimer);
@@ -8009,6 +8047,14 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
       if (!wrapper.contains(e.target) && wrapper.classList.contains('is-open')) {
         closeNow();
       }
+    });
+ 
+    // Reposition on scroll/resize while open
+    window.addEventListener('scroll', function () {
+      if (wrapper.classList.contains('is-open')) positionPopup();
+    }, true);
+    window.addEventListener('resize', function () {
+      if (wrapper.classList.contains('is-open')) positionPopup();
     });
   });
 })();
