@@ -2,6 +2,11 @@
 <html lang="de">
     <head>
 <!-- ===== START: OneTrust Consent Receipt SDK (loader for embedded web forms) ===== -->
+<script>
+  window.OtSdk = window.OtSdk || function () {
+    (OtSdk.q = OtSdk.q || []).push(arguments);
+  };
+</script>
 <script
   src="https://privacyportaltrial.onetrust.com/consent-embedded-forms/consent-receipt-scripts/OtFormStub.js"
   data-id="89af9315-196c-45ad-88ea-1b8ec3fe5a51"
@@ -5339,8 +5344,8 @@
         <p class="eon-signup-popup-text">
           Erhalten Sie spannende News und Angebote rund um E-Mobilität direkt per E-Mail. Tragen Sie einfach Ihre E-Mail-Adresse ein und bestätigen Sie Ihre Einwilligung.
         </p>
-        <!-- OneTrust inline web form container. The SDK injects the email field + consent checkbox + submit button into this element. -->
-        <div class="ot-open-webform eon-signup-onetrust-mount" id="4574b7d1-a890-4b3b-bd28-b9fe76673ad8"></div>
+        <!-- OneTrust inline web form target. InstallCP() at the bottom of the page renders the form into this div. -->
+        <div id="ot-container" class="eon-signup-onetrust-mount"></div>
       </div>
     </div>
     <!-- ===== END: OneTrust email signup trigger + popup ===== -->
@@ -7937,6 +7942,39 @@ var labels_456610268 = {"title":"Tarifdetails %%PRODUCT_NAME%%","blockPriceTable
 <script src="https://www.eon.de/etc.clientlibs/foundationNG/clientlibs/clientlib-custom.lc-28404c846892fdd004f399017ad781d4-lc.min.js"></script>
         </eon-ui-page-wrapper>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9f8090e47c50cc53","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"a5f7ddb959ba4e34806455ef7cd76267"}' crossorigin="anonymous"></script>
+<!-- ===== START: OneTrust web form install (renders the inline form into #ot-container) ===== -->
+<script>
+(function () {
+  // Collection point ID for the E-Mobility email signup web form.
+  // To change: update the CP_ID below to the collection point ID from your OneTrust dashboard.
+  var CP_ID = "4574b7d1-a890-4b3b-bd28-b9fe76673ad8";
+ 
+  function whenOTReady(callback) {
+    var timer = setInterval(function () {
+      if (window.OneTrust && window.OneTrust.webform && window.OneTrust.webform.InstallCP) {
+        clearInterval(timer);
+        callback();
+      }
+    }, 80);
+  }
+ 
+  function install() {
+    whenOTReady(function () {
+      OneTrust.webform.InstallCP(CP_ID, {
+        target: "#ot-container"
+      });
+    });
+  }
+ 
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", install);
+  } else {
+    install();
+  }
+})();
+</script>
+<!-- ===== END: OneTrust web form install ===== -->
+ 
 <!-- ===== START: OneTrust email signup popup behavior ===== -->
 <script>
 (function () {
