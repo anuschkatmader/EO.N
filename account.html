@@ -670,9 +670,10 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 6px;
-            height: 220px;
-            padding: 0 4px;
+            height: 240px;
+            padding: 0 4px 28px;
             align-items: end;
+            overflow: hidden;
         }
  
         .chart-month {
@@ -681,12 +682,15 @@
             justify-content: flex-end;
             align-items: center;
             height: 100%;
+            max-height: 100%;
             position: relative;
             cursor: pointer;
+            min-width: 0;
         }
  
         .chart-bar-stack {
             width: 100%;
+            max-height: calc(100% - 22px); /* leave room for the month label below */
             display: flex;
             flex-direction: column-reverse;
             border-radius: 4px;
@@ -1098,108 +1102,108 @@
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Mai 2025</strong>Haushalt: 240 kWh<br>Wallbox: 180 kWh<br>PV: 70 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 96px;"></div>
-                                <div class="bar-seg wallbox" style="height: 72px;"></div>
-                                <div class="bar-seg solar" style="height: 28px;"></div>
+                                <div class="bar-seg haushalt" style="height: 67px;"></div>
+                                <div class="bar-seg wallbox" style="height: 50px;"></div>
+                                <div class="bar-seg solar" style="height: 20px;"></div>
                             </div>
                             <div class="chart-month-label">Mai</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Juni 2025</strong>Haushalt: 215 kWh<br>Wallbox: 195 kWh<br>PV: 110 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 86px;"></div>
-                                <div class="bar-seg wallbox" style="height: 78px;"></div>
-                                <div class="bar-seg solar" style="height: 44px;"></div>
+                                <div class="bar-seg haushalt" style="height: 60px;"></div>
+                                <div class="bar-seg wallbox" style="height: 55px;"></div>
+                                <div class="bar-seg solar" style="height: 31px;"></div>
                             </div>
                             <div class="chart-month-label">Jun</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Juli 2025</strong>Haushalt: 205 kWh<br>Wallbox: 210 kWh<br>PV: 145 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 82px;"></div>
-                                <div class="bar-seg wallbox" style="height: 84px;"></div>
-                                <div class="bar-seg solar" style="height: 58px;"></div>
+                                <div class="bar-seg haushalt" style="height: 57px;"></div>
+                                <div class="bar-seg wallbox" style="height: 59px;"></div>
+                                <div class="bar-seg solar" style="height: 41px;"></div>
                             </div>
                             <div class="chart-month-label">Jul</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>August 2025</strong>Haushalt: 220 kWh<br>Wallbox: 200 kWh<br>PV: 140 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 88px;"></div>
-                                <div class="bar-seg wallbox" style="height: 80px;"></div>
-                                <div class="bar-seg solar" style="height: 56px;"></div>
+                                <div class="bar-seg haushalt" style="height: 62px;"></div>
+                                <div class="bar-seg wallbox" style="height: 56px;"></div>
+                                <div class="bar-seg solar" style="height: 39px;"></div>
                             </div>
                             <div class="chart-month-label">Aug</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>September 2025</strong>Haushalt: 240 kWh<br>Wallbox: 195 kWh<br>PV: 105 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 96px;"></div>
-                                <div class="bar-seg wallbox" style="height: 78px;"></div>
-                                <div class="bar-seg solar" style="height: 42px;"></div>
+                                <div class="bar-seg haushalt" style="height: 67px;"></div>
+                                <div class="bar-seg wallbox" style="height: 55px;"></div>
+                                <div class="bar-seg solar" style="height: 29px;"></div>
                             </div>
                             <div class="chart-month-label">Sep</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Oktober 2025</strong>Haushalt: 295 kWh<br>Wallbox: 205 kWh<br>PV: 65 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 118px;"></div>
-                                <div class="bar-seg wallbox" style="height: 82px;"></div>
-                                <div class="bar-seg solar" style="height: 26px;"></div>
+                                <div class="bar-seg haushalt" style="height: 83px;"></div>
+                                <div class="bar-seg wallbox" style="height: 57px;"></div>
+                                <div class="bar-seg solar" style="height: 18px;"></div>
                             </div>
                             <div class="chart-month-label">Okt</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>November 2025</strong>Haushalt: 340 kWh<br>Wallbox: 225 kWh<br>PV: 35 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 136px;"></div>
-                                <div class="bar-seg wallbox" style="height: 90px;"></div>
-                                <div class="bar-seg solar" style="height: 14px;"></div>
+                                <div class="bar-seg haushalt" style="height: 95px;"></div>
+                                <div class="bar-seg wallbox" style="height: 63px;"></div>
+                                <div class="bar-seg solar" style="height: 10px;"></div>
                             </div>
                             <div class="chart-month-label">Nov</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Dezember 2025</strong>Haushalt: 385 kWh<br>Wallbox: 240 kWh<br>PV: 20 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 154px;"></div>
-                                <div class="bar-seg wallbox" style="height: 96px;"></div>
-                                <div class="bar-seg solar" style="height: 8px;"></div>
+                                <div class="bar-seg haushalt" style="height: 108px;"></div>
+                                <div class="bar-seg wallbox" style="height: 67px;"></div>
+                                <div class="bar-seg solar" style="height: 6px;"></div>
                             </div>
                             <div class="chart-month-label">Dez</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Januar 2026</strong>Haushalt: 395 kWh<br>Wallbox: 245 kWh<br>PV: 25 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 158px;"></div>
-                                <div class="bar-seg wallbox" style="height: 98px;"></div>
-                                <div class="bar-seg solar" style="height: 10px;"></div>
+                                <div class="bar-seg haushalt" style="height: 111px;"></div>
+                                <div class="bar-seg wallbox" style="height: 69px;"></div>
+                                <div class="bar-seg solar" style="height: 7px;"></div>
                             </div>
                             <div class="chart-month-label">Jan</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>Februar 2026</strong>Haushalt: 350 kWh<br>Wallbox: 220 kWh<br>PV: 55 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 140px;"></div>
-                                <div class="bar-seg wallbox" style="height: 88px;"></div>
-                                <div class="bar-seg solar" style="height: 22px;"></div>
+                                <div class="bar-seg haushalt" style="height: 98px;"></div>
+                                <div class="bar-seg wallbox" style="height: 62px;"></div>
+                                <div class="bar-seg solar" style="height: 15px;"></div>
                             </div>
                             <div class="chart-month-label">Feb</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>März 2026</strong>Haushalt: 280 kWh<br>Wallbox: 210 kWh<br>PV: 85 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 112px;"></div>
-                                <div class="bar-seg wallbox" style="height: 84px;"></div>
-                                <div class="bar-seg solar" style="height: 34px;"></div>
+                                <div class="bar-seg haushalt" style="height: 78px;"></div>
+                                <div class="bar-seg wallbox" style="height: 59px;"></div>
+                                <div class="bar-seg solar" style="height: 24px;"></div>
                             </div>
                             <div class="chart-month-label">Mär</div>
                         </div>
                         <div class="chart-month">
                             <div class="chart-tooltip"><strong>April 2026</strong>Haushalt: 230 kWh<br>Wallbox: 182 kWh<br>PV: 120 kWh</div>
                             <div class="chart-bar-stack">
-                                <div class="bar-seg haushalt" style="height: 92px;"></div>
-                                <div class="bar-seg wallbox" style="height: 72px;"></div>
-                                <div class="bar-seg solar" style="height: 48px;"></div>
+                                <div class="bar-seg haushalt" style="height: 64px;"></div>
+                                <div class="bar-seg wallbox" style="height: 50px;"></div>
+                                <div class="bar-seg solar" style="height: 34px;"></div>
                             </div>
                             <div class="chart-month-label">Apr</div>
                         </div>
